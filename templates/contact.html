@@ -1,0 +1,12 @@
+<html>
+<h1>Hello</h1>
+<body>
+<form action="/contact/" method='post'>
+{% csrf_token %}
+{{contactform.as_ul}}
+
+ <input type="submit" value="Submit">
+</form>
+</body>
+
+

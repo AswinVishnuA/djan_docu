@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Length of the Beam</h2>
+
+<form action="" method='post'>
+  {% csrf_token %}
+  {{form}}
+  <input type="submit" value="Submit">
+</form>
+
+<h2>Choose the Supports</h2>
+        <form action='pined' method='post'>
+         {% csrf_token %}
+         {{pin}}
+         <input type='submit' value="Submit">
+         </form>
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<class="container">
+  
+  <!-- Trigger the modal with a button -->
+  <button type="button"  data-toggle="modal" data-target="#myModal">Pin</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+         <form action='pined' method='post'>
+         {% csrf_token %}
+         {{pin}}
+         <input type='submit'>
+         </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <class="container">
+  
+  <!-- Trigger the modal with a button -->
+  <button type="button"  data-toggle="modal" data-target="#myModal5">Roller</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+         <form action='' method='post'>
+        {% csrf_token %} 
+         <label for="dfl">Distance from leftend:</label><br>
+         <input type="number" step="0.01" id="dfl" name="dfl"><br>
+         <input type='submit'>
+         </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <class="container">
+  <button type="button"  data-toggle="modal" data-target="#myModal1">Fixed</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+         <form action='' method='post'>
+         {% csrf_token %}
+         <input type="radio" id="le" name="gender" value="le">
+         <label for="le">Left end</label><br>
+         <input type="radio" id="re" name="gender" value="re">
+         <label for="re">Right end</label><br>
+         <input type='submit'>
+         </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-         
+          data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+
+</body>
+
+
+<h2>Apply the Loads</h2>
+
+<class="container">
+  
+  <!-- Trigger the modal with a button -->
+  
+  <button type="button"  data-toggle="modal" data-target="#myModal2">Point Load</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+         <form action='' method='post'>
+         {% csrf_token %}
+         <label for="dfl">Distance from leftend:</label><br>
+         <input type="number" step="0.01" id="dfl" name="dfl"><br>
+         <label for="vof">Value:</label><br>
+        <input type='number' step="0.01" id='vof' name='vof'><br>
+         <input type='submit'>
+         </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <class="container">
+  
+  <!-- Trigger the modal with a button -->
+  <button type="button"  data-toggle="modal" data-target="#myModal3">Couple moment</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+         <form action='' method='post'>
+         {% csrf_token %}
+         <label for="dfl">Distance from leftend:</label><br>
+         <input type="number" step="0.01" id="dfl" name="dfl"><br>
+         <label for="voc">Value:</label><br>
+        <input type='number' step="0.01" id='voc' name='voc'><br>
+         <input type='submit'>
+         </form>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+  <class="container">
+  <button type="button"  data-toggle="modal" data-target="#myModal4">UDL</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+         <form action='' method='post'>
+         {% csrf_token %}
+         <label for="sp">Starting Point:</label><br>
+        <input type='number' step="0.01" id='sp' name='sp'><br>
+        <label for="ep">Ending Point:</label><br>
+        <input type='number' step="0.01" id='ep' name='ep'><br>
+        <label for="vou">Value:</label><br>
+        <input type='number' step="0.01" id='vou' name='vou'><br>
+         <input type='submit'>
+         </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-         
+          data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
